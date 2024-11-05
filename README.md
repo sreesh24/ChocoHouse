@@ -50,7 +50,7 @@ This application incorporates several edge case handling mechanisms to ensure da
    Create a virtual environment and install the required packages:
    ```bash
    python -m venv venv
-   source venv/bin/activate   # On Windows use `venv\Scripts\activate`
+   venv\Scripts\activate
    pip install -r requirements.txt
    ```
 
