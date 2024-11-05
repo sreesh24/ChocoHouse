@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chocolate House Management</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Chocolate House Management</h1>
+
+    <section>
+      <h2>Add Seasonal Flavor</h2>
+      <form id="flavor-form">
+        <div class="form-group">
+          <label for="flavorName">Flavor Name</label>
+          <input type="text" class="form-control" id="flavorName" required>
+        </div>
+        <div class="form-group">
+          <label for="availableFrom">Available From</label>
+          <input type="date" class="form-control" id="availableFrom" required>
+        </div>
+        <div class="form-group">
+          <label for="availableUntil">Available Until</label>
+          <input type="date" class="form-control" id="availableUntil" required>
+        </div>
+        <div class="form-group">
+          <label for="status">Status</label>
+          <select class="form-control" id="status">
+            <option value="available">Available</option>
+            <option value="unavailable">Unavailable</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="addFlavor()">Add Flavor</button>
+        
+      </form>
+      <div id="flavors-table" class="mt-3"></div>
+    </section>  
+
+    <section class="mt-5">
+      <h2>Update Ingredient Inventory</h2>
+      <form id="inventory-form">
+        <div class="form-group">
+          <label for="ingredientName">Ingredient Name</label>
+          <input type="text" class="form-control" id="ingredientName" required>
+        </div>
+        <div class="form-group">
+          <label for="quantity">Quantity</label>
+          <input type="number" class="form-control" id="quantity" required>
+        </div>
+        <div class="form-group">
+          <label for="unit">Unit</label>
+          <input type="text" class="form-control" id="unit" required>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="updateInventory()">Update Inventory</button>
+        
+      </form>
+      <div id="inventory-table" class="mt-3"></div>
+    </section>
+
+    <section class="mt-5">
+      <h2>Customer Suggestions</h2>
+      <form id="suggestion-form">
+        <div class="form-group">
+          <label for="customerName">Customer Name</label>
+          <input type="text" class="form-control" id="customerName" required>
+        </div>
+        <div class="form-group">
+          <label for="flavorSuggestion">Suggested Flavor</label>
+          <input type="text" class="form-control" id="flavorSuggestion" required>
+        </div>
+        <div class="form-group">
+          <label for="allergyConcerns">Allergy Concerns</label>
+          <input type="text" class="form-control" id="allergyConcerns">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="addSuggestion()">Add Suggestion</button>
+        
+      </form>
+      <div id="suggestions-table" class="mt-3"></div>
+    </section>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </div>
+</body>
+</html>
