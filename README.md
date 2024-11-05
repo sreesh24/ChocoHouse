@@ -66,12 +66,12 @@ This application incorporates several edge case handling mechanisms to ensure da
 1. **Build the Docker Image**:
    Navigate to the project directory and run:
    ```bash
-   docker build -t chocolate-house-management .
+   docker build -t <image-name> .
    ```
 
 2. **Run the Docker Container**:
    ```bash
-   docker run -p 5000:5000 chocolate-house-management
+   docker run -p 5000:5000 <container-name>
    ```
 
    Access the application at `http://localhost:5000`.
