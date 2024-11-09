@@ -78,7 +78,7 @@ This application incorporates several edge case handling mechanisms to ensure da
 
 ## API Endpoints
 - **POST /flavors**: Add a new seasonal flavor.
-- **POST /inventory**: Update ingredient inventory.
+- **POST /inventory**: Add ingredient inventory.
 - **POST /suggestions**: Add customer suggestion.
 - **GET /inventory**: Fetch all ingredients.
 - **GET /flavors**: Fetch all seasonal flavors.
